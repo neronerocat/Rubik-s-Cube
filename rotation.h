@@ -1,0 +1,391 @@
+//旋转魔方对每个面拍照
+
+#ifndef ROTATION_H
+#define ROTATION_H
+
+#include "arm.h"
+
+void initial_position()
+{
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot2mid();
+    rot1mid();
+    waitKey(1000);
+    rot3mid();
+    rot4mid();
+    waitKey(4000);
+    slider4push();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    slider3push();
+    waitKey(1000);
+}
+
+void photoF()
+{
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3left();
+    rot4right();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+}
+
+void photoR()
+{
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot3right();
+    rot4left();
+    waitKey(1000);
+}
+
+void photoL()
+{
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(2000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot3left();
+    rot4right();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(2000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+}
+
+void photoB()
+{
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot3left();
+    rot4right();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(2000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+}
+
+void photoU()
+{
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(2000);
+    slider1back();
+    slider2back();
+    waitKey(2000);
+    rot3right();
+    rot4left();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    rot2right();
+    rot1left();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot2mid();
+    rot1mid();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3left();
+    rot4right();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+}
+
+void photoD()
+{
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    rot2left();
+    rot1right();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot2mid();
+    rot1mid();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot2left();
+    rot1right();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot2mid();
+    rot1mid();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3left();
+    rot4right();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+}
+
+void prepare()
+{
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    rot2right();
+    rot1left();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot2mid();
+    rot1mid();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(1000);
+}
+
+void rotateR()
+{
+    rot1right();
+    waitKey(1000);
+    slider1back();
+    waitKey(1000);
+    rot1mid();
+    waitKey(1000);
+    slider1push();
+    waitKey(1000);
+}
+void rotateR1()
+{
+    rot1left();
+    waitKey(1000);
+    slider1back();
+    waitKey(1000);
+    rot1mid();
+    waitKey(1000);
+    slider1push();
+    waitKey(1000);
+}
+
+void rotateL()
+{
+    rot2right();
+    waitKey(1000);
+    slider2back();
+    waitKey(1000);
+    rot2mid();
+    waitKey(1000);
+    slider2push();
+    waitKey(1000);
+}
+void rotateL1()
+{
+    rot2left();
+    waitKey(1000);
+    slider2back();
+    waitKey(1000);
+    rot2mid();
+    waitKey(1000);
+    slider2push();
+    waitKey(1000);
+}
+
+void rotateU()
+{
+    rot3right();
+    waitKey(1000);
+    slider3back();
+    waitKey(1000);
+    rot3mid();
+    waitKey(1000);
+    slider3push();
+    waitKey(1000);
+}
+void rotateU1()
+{
+    rot3left();
+    waitKey(1000);
+    slider3back();
+    waitKey(1000);
+    rot3mid();
+    waitKey(1000);
+    slider3push();
+    waitKey(1000);
+}
+
+void rotateD()
+{
+    rot4right();
+    waitKey(1000);
+    slider4back();
+    waitKey(1000);
+    rot4mid();
+    waitKey(1000);
+    slider4push();
+    waitKey(1000);
+}
+void rotateD1()
+{
+    rot4left();
+    waitKey(1000);
+    slider4back();
+    waitKey(1000);
+    rot4mid();
+    waitKey(1000);
+    slider4push();
+    waitKey(1000);
+}
+
+void turnFB()           //use rotateR, L to rotate F, B
+{
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot3left();
+    rot4right();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+}
+void backFB()
+{
+    slider1back();
+    slider2back();
+    waitKey(1000);
+    rot3right();
+    rot4left();
+    waitKey(1000);
+    slider1push();
+    slider2push();
+    waitKey(1000);
+    slider3back();
+    slider4back();
+    waitKey(1000);
+    rot3mid();
+    rot4mid();
+    waitKey(1000);
+    slider3push();
+    slider4push();
+    waitKey(1000);
+}
+
+#endif // ROTATION_H
